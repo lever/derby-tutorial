@@ -1,0 +1,32 @@
+{
+  "name": "derby-tutorial",
+  "version": "1.0.0",
+  "description": "A step-by-step tutorial on Derbyjs basics",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hdavidzhu/derby-tutorial.git"
+  },
+  "keywords": [
+    "derbyjs"
+  ],
+  "author": "hdavidzhu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hdavidzhu/derby-tutorial/issues"
+  },
+  "homepage": "https://github.com/hdavidzhu/derby-tutorial#readme",
+  "dependencies": {
+    "browserify": "^16.2.3",
+    "derby": "^0.10.8",
+    "derby-debug": "^0.1.0",
+    "derby-starter": "^0.4.7",
+    "express": "^4.16.4",
+    "racer": "^0.9.3",
+    "racer-bundle": "^0.3.0",
+    "sharedb-mingo-memory": "^1.1.0"
+  }
+}
