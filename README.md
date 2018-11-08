@@ -17,3 +17,12 @@ To get started:
 ### Contributing
 
 If you find anything confusing, please [submit an issue here](TODO), or submit a PR with tutorial improvements! Your help and feedback is really appreciated :heart:
+
+### TODOs
+
+- [ ] Nested components (arguments and events)
+- [ ] Component lifecyles
+- [ ] Simple partials
+- [ ] Collaboration
+- [ ] Collections
+- [ ] Persistence
