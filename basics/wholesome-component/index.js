@@ -9,11 +9,16 @@ class WholesomeComponent {
   // Runs both on the server and the client.
   // TODO: List why we'd want something in init
   init() {
+    this.$cats = this.model.at('cats')
   }
 
   // Runs only on the client.
   // TODO: List why we'd want something in create
   create() {
+  }
+
+  _addCat() {
+    this.$cats.push('New cat')
   }
 }
 

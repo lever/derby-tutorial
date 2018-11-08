@@ -1,5 +1,16 @@
 <index:>
-  This is displayed by wholesome-component!
-
-  I'm going to place the child here:
-  <view is="child-component"/>
+  <div>
+    This is displayed by wholesome-component!
+    <br/>
+    Let's increase the number of child components:
+    <button on-click="_addCat()">
+      Do it
+    </button>
+  </div>
+  {{each cats as #cat}}
+    <div>
+      I'm going to place the child here:
+      <br/>
+      <view is="child-component"/>
+    </div>
+  {{/each}}
