@@ -10,6 +10,7 @@ class WholesomeComponent {
   // TODO: List why we'd want something in init
   init() {
     this.$cats = this.model.at('cats')
+    this.$dogs = this.model.at('dogs')
   }
 
   // Runs only on the client.
@@ -19,6 +20,10 @@ class WholesomeComponent {
 
   _addCat() {
     this.$cats.push('New cat')
+  }
+
+  _addDog() {
+    this.model.push('dogs', 'New dog')
   }
 }
 
