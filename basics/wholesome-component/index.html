@@ -4,13 +4,27 @@
     <br/>
     Let's increase the number of child components:
     <button on-click="_addCat()">
-      Do it
+      Meet a new cat
+    </button>
+    <button on-click="_addDog()">
+      Meet a new dog
     </button>
   </div>
   {{each cats as #cat}}
     <div>
-      I'm going to place the child here:
+      Hey, meet {{#cat}}:
       <br/>
-      <view is="child-component"/>
+      <view is="pet-display-component"
+        animalName="{{#cat}}"
+        animalType="cat"/>
+    </div>
+  {{/each}}
+  {{each dogs as #dog}}
+    <div>
+      Hey, meet {{#dog}}:
+      <br/>
+      <view is="pet-display-component"
+        animalName="{{#dog}}"
+        animalType="dog"/>
     </div>
   {{/each}}

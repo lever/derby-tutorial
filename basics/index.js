@@ -1,7 +1,7 @@
 // Let's import all of our dependencies first.
 const derby = require('derby')
 
-const ChildComponent = require('./wholesome-component/child-component')
+const PetDisplayComponent = require('./wholesome-component/pet-display-component')
 const SimpleComponent = require('./simple-component')
 const WholesomeComponent = require('./wholesome-component')
 
@@ -15,7 +15,7 @@ app.use(require('derby-debug'))
 
 // Components are defined as simple Javascript classes. They are registered on
 // Derby by calling `app.component(...)`
-app.component(ChildComponent)
+app.component(PetDisplayComponent)
 app.component(SimpleComponent)
 app.component(WholesomeComponent)
 

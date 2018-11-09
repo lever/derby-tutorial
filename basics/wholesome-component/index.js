@@ -1,3 +1,5 @@
+const faker = require('faker')
+
 // I'll use this component to demonstrate many of things you'd want to do with
 // components. Let's get started:
 class WholesomeComponent {
@@ -19,11 +21,13 @@ class WholesomeComponent {
   }
 
   _addCat() {
-    this.$cats.push('New cat')
+    this.$cats.push(faker.name.firstName())
   }
 
   _addDog() {
-    this.model.push('dogs', 'New dog')
+    // Rather than using a scoped Racer Model, we can also just push to the
+    // correct path
+    this.model.push('dogs', faker.name.firstName())
   }
 }
 
