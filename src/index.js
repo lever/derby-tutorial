@@ -1,6 +1,7 @@
 // Let's import all of our dependencies first.
 const derby = require('derby')
 
+const CollaborativeNoteEditor = require('./components/collaborative-note-editor')
 const PetDisplayComponent = require('./components/wholesome-component/pet-display-component')
 const SimpleComponent = require('./components/simple-component')
 const WholesomeComponent = require('./components/wholesome-component')
@@ -15,6 +16,7 @@ app.use(require('derby-debug'))
 
 // Components are defined as simple Javascript classes. They are registered on
 // Derby by calling `app.component(...)`
+app.component(CollaborativeNoteEditor)
 app.component(PetDisplayComponent)
 app.component(SimpleComponent)
 app.component(WholesomeComponent)
@@ -29,6 +31,13 @@ app.get('/simple-component', (page) => {
 
 app.get('/wholesome-component', (page) => {
   page.render(WholesomeComponent.prototype.name)
+})
+
+app.get('/collaborative-note-editor/:noteId', (page, model, params, next) => {
+  CollaborativeNoteEditor.load(model, params, null, (err) => {
+    if (err) return next(err)
+    page.render(CollaborativeNoteEditor.prototype.name)
+  })
 })
 
 module.exports = app
