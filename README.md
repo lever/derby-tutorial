@@ -40,7 +40,7 @@ This component is more fully-featured. It shows how you can:
 
 ## Contributing
 
-If you find anything confusing, please [submit an issue here](TODO), or submit a PR with tutorial improvements! Your help and feedback is really appreciated :heart:
+If you find anything confusing, please [submit an issue here](https://github.com/hdavidzhu/derby-tutorial/issues), or submit a PR with tutorial improvements! Your help and feedback is really appreciated :heart:
 
 ## TODOs
 

@@ -1,3 +1,6 @@
+<!-- You can import other view partials in the template by using `import` -->
+<import: src="./surprisePartial" ns="surprise-partial">
+
 <index:>
   <div>
     This is displayed by wholesome-component!
@@ -28,3 +31,9 @@
         animalType="dog"/>
     </div>
   {{/each}}
+  {{if cats.length > 5}}
+    <div>
+      This is going to show up after 5 cats!
+      <view is="surprise-partial:surprise"/>
+    </div>
+  {{/if}}
