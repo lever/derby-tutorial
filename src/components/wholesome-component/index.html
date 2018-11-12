@@ -37,3 +37,12 @@
       <view is="surprise-partial:surprise"/>
     </div>
   {{/if}}
+  {{if dogs.length > 3}}
+    <div>
+      This is the default:
+      <view is="surprise-partial"/>
+      <br/>
+      And this is another example of a view partial you can import:
+      <view is="surprise-partial:you-can-call-this-anything"/>
+    </div>
+  {{/if}}
