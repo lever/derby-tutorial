@@ -1,9 +1,9 @@
 // Let's import all of our dependencies first.
 const derby = require('derby')
 
-const PetDisplayComponent = require('./wholesome-component/pet-display-component')
-const SimpleComponent = require('./simple-component')
-const WholesomeComponent = require('./wholesome-component')
+const PetDisplayComponent = require('./components/wholesome-component/pet-display-component')
+const SimpleComponent = require('./components/simple-component')
+const WholesomeComponent = require('./components/wholesome-component')
 
 // A Derby app lets us register components, views, templates, and define routes.
 const app = derby.createApp('hello', __filename)
