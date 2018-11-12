@@ -12,7 +12,7 @@ CollaborativeNoteEditor.prototype.view = __dirname
 CollaborativeNoteEditor.load = (model, params, queries, cb) => {
   $note = model.at(`notes.${params.noteId}`)
   $note.subscribe((err) => {
-    $note.createNull('Hello world')
+    $note.createNull('This note is collaborative! Try editing this in two different windows.')
     return cb(err)
   })
 }
