@@ -33,6 +33,10 @@ app.get('/wholesome-component', (page) => {
   page.render(WholesomeComponent.prototype.name)
 })
 
+app.get('/collaborative-note-editor', (page, model) => {
+  page.redirect(`/collaborative-note-editor/${model.id()}`)
+})
+
 app.get('/collaborative-note-editor/:noteId', (page, model, params, next) => {
   CollaborativeNoteEditor.load(model, params, null, (err) => {
     if (err) return next(err)
