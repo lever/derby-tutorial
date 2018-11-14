@@ -25,7 +25,7 @@ app.component(WholesomeComponent)
 
 app.loadViews(__dirname)
 
-// This is a great starting place. Visit this route in the browser and look at
+// This is a great starting place to examine a component. Visit this route in the browser and look at
 // the related source code!
 app.get('/simple-component', (page) => {
   page.render(SimpleComponent.prototype.name)

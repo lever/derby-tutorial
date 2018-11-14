@@ -20,7 +20,8 @@ To get started:
 
 You may be familiar with *routes* from other frameworks like (Express.js)[https://expressjs.com/]. Derby's routing system is built on top of Express.js.
 
-Take a look at `src/index.js` for all the different routes that are available. We have commented thisfile to guide you through it.
+Take a look at `src/index.js` for all the different routes that are available. We have commented thisfile to guide you through it. We suggest having the source code open as you interact with the various
+tutorial pieces in your browser.
 
 ## Guide
 
