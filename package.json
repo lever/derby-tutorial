@@ -4,6 +4,7 @@
   "description": "A step-by-step tutorial on Derbyjs basics",
   "main": "index.js",
   "scripts": {
+    "start": "node src/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

@@ -3,6 +3,7 @@ const derby = require('derby')
 
 const CollaborativeNoteEditor = require('./components/collaborative-note-editor')
 const PetDisplayComponent = require('./components/wholesome-component/pet-display-component')
+const RacerBasics = require('./components/racer-basics')
 const SimpleComponent = require('./components/simple-component')
 const WholesomeComponent = require('./components/wholesome-component')
 
@@ -18,6 +19,7 @@ app.use(require('derby-debug'))
 // Derby by calling `app.component(...)`
 app.component(CollaborativeNoteEditor)
 app.component(PetDisplayComponent)
+app.component(RacerBasics)
 app.component(SimpleComponent)
 app.component(WholesomeComponent)
 
@@ -27,6 +29,10 @@ app.loadViews(__dirname)
 // the related source code!
 app.get('/simple-component', (page) => {
   page.render(SimpleComponent.prototype.name)
+})
+
+app.get('/racer-basics', (page) => {
+  page.render(RacerBasics.prototype.name)
 })
 
 app.get('/wholesome-component', (page) => {

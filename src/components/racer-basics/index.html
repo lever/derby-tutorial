@@ -1,0 +1,40 @@
+<index:>
+  <div clas="row">
+    <div class="col">
+      <pre>
+        {{JSON.stringify(exampleData, null, 2)}}
+      </pre>
+    </div>
+    <div class="col">
+      <h3>General methods</h3>
+
+      <h4>set</h4>
+      <input value="{{inputs.set.path}}">
+      <input value="{{inputs.set.value}}">
+      <button on-click="set(inputs.set.path, inputs.set.value)">set()</button>
+
+      <h4>del</h4>
+      <input value="{{inputs.del.path}}">
+      <button on-click="del(inputs.del.path)">del()</button>
+
+      <h3>Object methods</h3>
+
+      <h4>add</h4>
+      <input value="{{inputs.add.path}}">
+      <button on-click="add(inputs.add.path, inputs.add.value)">add()</button>
+
+      <h3>Number methods</h3>
+
+      <h4>increment</h4>
+      <input value="{{inputs.increment.path}}">
+      <input type="number" value="{{inputs.increment.value}}">
+      <button on-click="increment(inputs.increment.path, inputs.increment.value)">increment()</button>
+
+      <h3>Array methods</h3>
+
+      <h4>push</h4>
+      <input value="{{inputs.push.path}}">
+      <input value="{{inputs.push.value}}">
+      <button on-click="push(inputs.push.path, inputs.push.value)">push()</button>
+    </div>
+  </div>
