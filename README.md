@@ -6,7 +6,7 @@ _For Derby v0.10_
 
 Hello, and welcome to our Derby tutorial!
 
-We'll be going through several core features that Derby provides. Along the way, we may build a few features.
+We'll be going through several core features that Derby provides. Along the way, we may build a few features. However, you can think of this tutorial of a sandbox of various Derby features, rather than a tutorial that will produce a full MVP application. We won't be explaining every thing in detail, so you can reference the [DerbyJS docs](https://derbyjs.com/docs/derby-0.10) as you work through the tutorial.
 
 To get started:
 
@@ -18,7 +18,10 @@ To get started:
 > node src/server.js
 ```
 
-Take a look at `src/index.js` for all the different routes that are available.
+You may be familiar with *routes* from other frameworks like (Express.js)[https://expressjs.com/]. Derby's routing system is built on top of Express.js.
+
+Take a look at `src/index.js` for all the different routes that are available. We have commented thisfile to guide you through it. We suggest having the source code open as you interact with the various
+tutorial pieces in your browser.
 
 ## Guide
 
