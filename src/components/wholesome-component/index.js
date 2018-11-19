@@ -1,5 +1,8 @@
 const faker = require('faker')
 
+// TODO 11/18/18: Think more about the scope of this component. Determine what
+// should and should not be covered.
+
 // Associated Derby docs: https://derbyjs.com/docs/derby-0.10/components/structure#structure
 
 // I'll use this component to demonstrate many of things you'd want to do with

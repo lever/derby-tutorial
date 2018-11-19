@@ -15,6 +15,9 @@ const app = derby.createApp('derby-tutorial', __filename)
 // `derb-debug` is a middleware that lets us do things like inspect data and
 // components on the page in the Developer Console.
 // More info here: https://github.com/derbyjs/derby-debug
+//
+// TODO 11/18/18: Add some run-through on all the useful methods that
+// derby-debug offers
 app.use(require('derby-debug'))
 
 // Components are defined as simple Javascript classes.
@@ -42,6 +45,7 @@ app.get('/wholesome-component', (page) => {
 })
 
 app.get('/collaborative-note-editor', (page, model) => {
+  // If a user visits this directly, let's just create a new note for them
   page.redirect(`/collaborative-note-editor/${model.id()}`)
 })
 
