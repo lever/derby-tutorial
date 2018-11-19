@@ -66,7 +66,7 @@ This component is more fully-featured. It shows how you can:
 * Add child components inside of the main component, and pass in data and receive outputs
 * use view partials without needing a whole component
 
-TODO 11/18/18: Might be better to break this into smaller subsections
+<!-- TODO 11/18/18: Might be better to break this into smaller subsections -->
 
 ### Collaboration and realtime
 
@@ -78,7 +78,7 @@ At the bottom of Derby sits [ShareDB](https://github.com/share/sharedb) which is
 
 To interact with remote persisted data, we look at collections and documents. You can think of this as analogous to [Mongo collections](https://docs.mongodb.com/manual/core/databases-and-collections/#collections) and documents, or SQL tables and records.
 
-TODO 11/18/18: Reference how this is done on the server
+<!-- TODO 11/18/18: Reference how this is done on the server -->
 
 ## Additional resources
 
