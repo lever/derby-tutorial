@@ -1,16 +1,16 @@
 // Components can be defined as simple Classes. We'll cover methods later on.
 // Right now, I'm just going to keep it empty.
-class SimpleComponent {}
+class HelloWorld {}
 
 // `name` helps us reference the component in our template. With this name, we
 // can do in our HTML:
 //
-// <view is="simple-component"/>
+// <view is="hello-world"/>
 //
 // And this component will show up!
-SimpleComponent.prototype.name = 'simple-component'
+HelloWorld.prototype.name = 'hello-world'
 
 // `view` tells Derby where the template for this component lives
-SimpleComponent.prototype.view = __dirname
+HelloWorld.prototype.view = __dirname
 
-module.exports = SimpleComponent
+module.exports = HelloWorld

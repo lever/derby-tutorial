@@ -47,7 +47,7 @@ class RacerBasics {
     this.$exampleData.setDiff(path, value)
   }
 
-  // TODO:
+  // TODO 11/18/18:
   // - setDiffDeep
   // - setArrayDiff
   // - setArrayDiffDeep
@@ -58,7 +58,7 @@ class RacerBasics {
     this.$exampleData.add(path, _.cloneDeep(object))
   }
 
-  // TODO:
+  // TODO 11/18/18:
   // - setEach
 
   // Number methods
@@ -73,7 +73,7 @@ class RacerBasics {
     this.$exampleData.push(path, value)
   }
 
-  // TODO:
+  // TODO 11/18/18:
   // - unshift
   // - insert
   // - pop
@@ -83,7 +83,7 @@ class RacerBasics {
 
   // String methods
 
-  // TODO:
+  // TODO 11/18/18:
   // - stringInsert
   // - stringRemove
 }
