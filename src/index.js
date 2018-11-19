@@ -1,7 +1,8 @@
 // Let's import all of our dependencies first.
 const derby = require('derby')
 
-// These are components. You can think of them as the building blocks of your app that encapsulate functionality.
+// These are components. You can think of them as the building blocks of your
+// app that encapsulate functionality.
 const CollaborativeNoteEditor = require('./components/collaborative-note-editor')
 const PetDisplayComponent = require('./components/wholesome-component/pet-display-component')
 const RacerBasics = require('./components/racer-basics')
@@ -30,8 +31,8 @@ app.component(WholesomeComponent)
 
 app.loadViews(__dirname)
 
-// This is a great starting place to examine a component. Visit this route in the browser and look at
-// the related source code!
+// This is a great starting place to examine a component. Visit this route in
+// the browser and look at the related source code!
 app.get('/hello-world', (page) => {
   page.render(HelloWorld.prototype.name)
 })
