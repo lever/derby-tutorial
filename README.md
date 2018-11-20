@@ -10,13 +10,16 @@ We'll be going through several core features that Derby provides. Along the way,
 
 To get started:
 
-```
+```shell
 # Get the repo
 > git clone https://github.com/lever/derby-tutorial.git
 > cd derby-tutorial
 
 # Install dependencies
 > npm install
+
+# Start Mongo
+> docker-compose -f ./docker-compose.yaml up
 
 # Start the server
 > node src/server.js
