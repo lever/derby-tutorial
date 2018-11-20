@@ -5,35 +5,37 @@
 -->
 
 <index:>
-  <h2>
-    Hello world!
-  </h2>
+  <div class="col-6 mx-auto">
+    <h2>
+      Hello world!
+    </h2>
 
-  <!--
-    By using the {{varName}} syntax, we can reference and bind to data (on the
-    component-scoped Racer Model.)
+    <!--
+      By using the {{varName}} syntax, we can reference and bind to data (on the
+      component-scoped Racer Model.)
 
-    (Additional reading: https://derbyjs.com/docs/derby-0.10/views/template-syntax/paths#model-values)
-  -->
-  <p>
-    What is your name? <input value="{{name}}" placeholder="Your name here">
-  </p>
-
-  <!--
-    Name shows up in real-time here!
-  -->
-  <p>
-    Nice to meet you, <b>{{name}}</b>
-  </p>
-
-  <hr/>
-
-  {{if name}}
+      (Additional reading: https://derbyjs.com/docs/derby-0.10/views/template-syntax/paths#model-values)
+    -->
     <p>
-      Now that you've seen your name show up as you type, let's check out the source code in <pre>./src/components/hello-world/index.html</pre> to see how this works.
+      What is your name? <input value="{{name}}" placeholder="Your name here">
     </p>
-  {{/if}}
 
-  <!--
-    Great! Now let's also take a look at the controller logic in `./index.js`
-  -->
+    <!--
+      Name shows up in real-time here!
+    -->
+    <p>
+      Nice to meet you, <b>{{name}}</b>
+    </p>
+
+    <hr/>
+
+    {{if name}}
+      <p>
+        Now that you've seen your name show up as you type, let's check out the source code in <pre>./src/components/hello-world/index.html</pre> to see how this works.
+      </p>
+    {{/if}}
+
+    <!--
+      Great! Now let's also take a look at the controller logic in `./index.js`
+    -->
+  </div>

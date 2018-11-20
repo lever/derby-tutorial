@@ -1,8 +1,20 @@
 <index:>
-  <!-- Learn more about these basic methods @ https://derbyjs.com/docs/derby-0.10/models/setters -->
-  <div class="row">
-    <div class="col px4">
-      <h3>General methods</h3>
+  <div class="row col-6 mx-auto">
+    <h3>Setters</h3>
+
+    <p>
+      This section is all about different ways we can set/update/modify data. The following are a handful of helpful methods that Racer Models expose for making updates.
+    </p>
+    <p>
+      Learn more about these basic methods at https://derbyjs.com/docs/derby-0.10/models/setters
+    </p>
+    <div class="col col-6">
+      <h4>results</h4>
+      <pre>
+        {{JSON.stringify(exampleData, null, 2)}}
+      </pre>
+    </div>
+    <div class="col col-6">
       <h4>set</h4>
       <input value="{{inputs.set.path}}">
       <input value="{{inputs.set.value}}">
@@ -27,10 +39,5 @@
       <input value="{{inputs.push.path}}">
       <input value="{{inputs.push.value}}">
       <button on-click="push(inputs.push.path, inputs.push.value)">push()</button>
-    </div>
-    <div class="col pl4">
-      <pre>
-        {{JSON.stringify(exampleData, null, 2)}}
-      </pre>
     </div>
   </div>
