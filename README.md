@@ -28,7 +28,7 @@ Take a look at `src/index.js` for all the different routes that are available. W
 
 ## Contributing
 
-If you find anything confusing, please [submit an issue here](https://github.com/hdavidzhu/derby-tutorial/issues), or submit a PR with tutorial improvements! Your help and feedback is really appreciated :heart:
+If you find anything confusing, please [submit an issue here](https://github.com/lever/derby-tutorial/issues), or submit a PR with tutorial improvements! Your help and feedback is really appreciated :heart:
 
 ## Overview
 
