@@ -1,6 +1,6 @@
 # Derby Tutorial
 
-_For Derby v0.10_
+_For Derby v0.10. Made for those onboarding to Derby, with some prior model-view-* and/or web-dev experience._
 
 ## Getting started
 

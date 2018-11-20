@@ -1,18 +1,22 @@
+<!--
+  Templates are written in HTML. We use a Handlebars-inspired syntax. Learn more
+  about the template syntax at
+  https://derbyjs.com/docs/derby-0.10/views/template-syntax
+-->
+
 <index:>
-  <!--
-    Templates are written in HTML. We use a Handlebars-inspired syntax. Learn
-    more about the template syntax @ https://derbyjs.com/docs/derby-0.10/views/template-syntax
-  -->
-  <p>
+  <h2>
     Hello world!
-  </p>
+  </h2>
 
   <!--
     By using the {{varName}} syntax, we can reference and bind to data (on the
-    component-scoped Racer Model.) Try typing in this input:
+    component-scoped Racer Model.)
+
+    (Additional reading: https://derbyjs.com/docs/derby-0.10/views/template-syntax/paths#model-values)
   -->
   <p>
-    What is your name? <input value="{{name}}">
+    What is your name? <input value="{{name}}" placeholder="Your name here">
   </p>
 
   <!--
@@ -21,3 +25,15 @@
   <p>
     Nice to meet you, <b>{{name}}</b>
   </p>
+
+  <hr/>
+
+  {{if name}}
+    <p>
+      Now that you've seen your name show up as you type, let's check out the source code in <pre>./src/components/hello-world/index.html</pre> to see how this works.
+    </p>
+  {{/if}}
+
+  <!--
+    Great! Now let's also take a look at the controller logic in `./index.js`
+  -->

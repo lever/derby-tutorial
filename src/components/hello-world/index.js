@@ -14,3 +14,6 @@ HelloWorld.prototype.name = 'hello-world'
 HelloWorld.prototype.view = __dirname
 
 module.exports = HelloWorld
+
+// That ends `Hello World`! You are now ready for the next section of the
+// tutorial.
