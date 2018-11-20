@@ -32,7 +32,7 @@ If you find anything confusing, please [submit an issue here](https://github.com
 
 ## Overview
 
-I recommend following the order of this outline. Some info builds on top of each other, and that's especially useful if this is your first time using Derby.
+We recommend following the order of this outline. Some info builds on top of each other, and that's especially useful if this is your first time using Derby.
 
 Later on, you can reference this tutorial and [the official docs](https://derbyjs.com/) if you'd like to see anything particular in action.
 
@@ -52,6 +52,8 @@ Let's learn the bare minimum of what a component can offer. First, let's visit
 Check out the source code in `src/components/hello-world`. `index.js` defines our controller, and `index.html` defines our template.
 
 ### Racer basics
+
+Now you are ready to read and manipulate some data!
 
 [Racer](https://derbyjs.com/docs/derby-0.10/models) is used within Derby to provide an interface to our underlying data. Underneath, Racer provides realtime syncing and events - which keeps our data in sync and our app reactive.
 

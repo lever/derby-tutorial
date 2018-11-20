@@ -1,5 +1,7 @@
 class PetDisplayComponent {
   create() {
+    // TODO 11/19/18: This doesn't actually work. Come up with a relevant
+    // example that explains how destroy works.
     this.on('destroy', () => {
       console.log('I am destroying this component!')
     })

@@ -1,5 +1,5 @@
 // Components can be defined as simple Classes. We'll cover methods later on.
-// Right now, I'm just going to keep it empty.
+// Right now, we're just going to keep it empty.
 class HelloWorld {}
 
 // `name` helps us reference the component in our template. With this name, we

@@ -5,7 +5,7 @@ const faker = require('faker')
 
 // Associated Derby docs: https://derbyjs.com/docs/derby-0.10/components/structure#structure
 
-// I'll use this component to demonstrate many of things you'd want to do with
+// We'll use this component to demonstrate many of things you'd want to do with
 // components. Let's get started:
 class WholesomeComponent {
 
