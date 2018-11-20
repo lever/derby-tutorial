@@ -36,7 +36,7 @@ class WholesomeComponent {
   }
 }
 
-WholesomeComponent.prototype.name = 'wholesome-component'
+WholesomeComponent.prototype.name = 'components-in-action-demo'
 WholesomeComponent.prototype.view = __dirname
 
 module.exports = WholesomeComponent

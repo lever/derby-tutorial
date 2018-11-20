@@ -4,10 +4,10 @@ const derby = require('derby')
 // These are components. You can think of them as the building blocks of your
 // app that encapsulate functionality.
 const CollaborativeNoteEditor = require('./components/collaborative-note-editor')
-const PetDisplayComponent = require('./components/wholesome-component/pet-display-component')
+const PetDisplayComponent = require('./components/components-in-action-demo/pet-display-component')
 const RacerBasics = require('./components/racer-basics')
 const HelloWorld = require('./components/hello-world')
-const WholesomeComponent = require('./components/wholesome-component')
+const WholesomeComponent = require('./components/components-in-action-demo')
 
 // A Derby app lets us register components, views/templates, and routes.
 // Here we are creating an app called 'derby-tutorial'
@@ -41,7 +41,7 @@ app.get('/racer-basics', (page) => {
   page.render(RacerBasics.prototype.name)
 })
 
-app.get('/wholesome-component', (page) => {
+app.get('/components-in-action-demo', (page) => {
   page.render(WholesomeComponent.prototype.name)
 })
 
