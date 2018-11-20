@@ -18,8 +18,10 @@ To get started:
 # Install dependencies
 > npm install
 
-# Start Mongo
+# Start Mongo with Docker Compose...
 > docker-compose -f ./docker-compose.yaml up
+# OR, if you don't want to use Docker Compose...
+> docker run -d --rm mongo:3.4
 
 # Start the server
 > node src/server.js
