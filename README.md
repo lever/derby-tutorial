@@ -12,7 +12,7 @@ To get started:
 
 ```
 # Get the repo
-> git clone https://github.com/hdavidzhu/derby-tutorial.git
+> git clone https://github.com/lever/derby-tutorial.git
 > cd derby-tutorial
 
 # Install dependencies
@@ -47,7 +47,7 @@ Later on, you can reference this tutorial and [the official docs](https://derbyj
 ### Hello world
 
 Let's learn the bare minimum of what a component can offer. First, let's visit
-`/hello-world` in your browser.
+[/hello-world](http://localhost:3456/hello-world) in your browser.
 
 Check out the source code in `src/components/hello-world`. `index.js` defines our controller, and `index.html` defines our template.
 
@@ -55,7 +55,7 @@ Check out the source code in `src/components/hello-world`. `index.js` defines ou
 
 [Racer](https://derbyjs.com/docs/derby-0.10/models) is used within Derby to provide an interface to our underlying data. Underneath, Racer provides realtime syncing and events - which keeps our data in sync and our app reactive.
 
-Visit `/racer-basics` and the corresponding source code to see all the different ways we can interact with data (via Racer).
+Visit [/racer-basics](http://localhost:3456/racer-basics) and the corresponding source code to see all the different ways we can interact with data (via Racer).
 
 ### Components in action
 
@@ -70,7 +70,7 @@ This component is more fully-featured. It shows how you can:
 
 ### Collaboration and realtime
 
-What makes Derby powerful is its realtime-ness. Let's take a look at `/collaborative-note-editor` to see this in action.
+What makes Derby powerful is its realtime-ness. Let's take a look at [/collaborative-note-editor](http://localhost:3456/collaborative-note-editor) to see this in action.
 
 ### Collections and data persistence
 

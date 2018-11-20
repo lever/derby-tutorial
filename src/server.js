@@ -1,4 +1,4 @@
-// `derby-starter` just provides some easy presets to get a Derby server started.
+// `derby-starter` provides some easy presets to get a Derby server started.
 // This isn't something we need to worry about for now, but feel free to poke
 // around!
 //
