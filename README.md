@@ -10,13 +10,18 @@ We'll be going through several core features that Derby provides. Along the way,
 
 To get started:
 
-```
+```shell
 # Get the repo
 > git clone https://github.com/lever/derby-tutorial.git
 > cd derby-tutorial
 
 # Install dependencies
 > npm install
+
+# Start Mongo with Docker Compose...
+> docker-compose -f ./docker-compose.yaml up
+# OR, if you don't want to use Docker Compose...
+> docker run -d --rm mongo:3.4
 
 # Start the server
 > node src/server.js
