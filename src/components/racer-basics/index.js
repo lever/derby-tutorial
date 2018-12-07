@@ -3,7 +3,10 @@ _ = require('lodash')
 class RacerBasics {
 
   create() {
+    //// explaining what at does (scoping)
+    //// https://derbyjs.com/docs/derby-0.10/models/paths#scoped-models
     this.$exampleData = this.model.at('exampleData')
+    //// also explaining the significance of the $ prepending the var name
     this.$exampleData.set({
       bitcoin: 3,
       books: [
@@ -14,11 +17,17 @@ class RacerBasics {
       pokemons: {},
     })
 
+    //// i would explain the magic of the model where you can set paths even if they don't exist
+    //// and they would get created for you (which is a really cool thing imo)
+
+    //// also grouping model paths by type -- like in this case all inputs are grouped below
     this.model.set('inputs.set.path', 'donut')
     this.model.set('inputs.set.value', 'chocolate')
     this.model.set('inputs.del.path', 'donut')
+    //// these paths are not used in the HTML currently so remove it?
     this.model.set('inputs.setNull.path', 'missingDonut')
     this.model.set('inputs.setNull.value', 'hazelnut')
+
     this.model.set('inputs.setDiff.path', 'donut')
     this.model.set('inputs.setNull.value', 'chocolate raspberry')
     this.model.set('inputs.add.path', 'pokemons')
@@ -39,6 +48,7 @@ class RacerBasics {
     this.$exampleData.del(path)
   }
 
+  //// this function is not used in the HTML so remove it?
   setNull(path, value) {
     this.$exampleData.setNull(path, value)
   }
@@ -46,6 +56,8 @@ class RacerBasics {
   setDiff(path, value) {
     this.$exampleData.setDiff(path, value)
   }
+
+  //// i would keep TODO's in a separate branch instead of having comments mixed in with master
 
   // TODO 11/18/18:
   // - setDiffDeep
