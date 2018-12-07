@@ -1,7 +1,11 @@
 class CollaborativeNoteEditor {
 
   init() {
+    //// i would also call out the configuration you need to do in ther server where the path ID
+    //// https://derbyjs.com/docs/derby-0.10/components/scope#root-model
     let noteId = this.model.root.get('$render.params.noteId')
+    //// .scope means getting it at the root
+    //// https://derbyjs.com/docs/derby-0.10/models/references#references
     this.$note = this.model.ref('note', this.model.scope(`notes.${noteId}`))
   }
 }
