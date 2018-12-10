@@ -104,3 +104,5 @@ RacerBasics.prototype.name = 'racer-basics'
 RacerBasics.prototype.view = __dirname
 
 module.exports = RacerBasics
+
+// Next part: https://github.com/lever/derby-tutorial#collaboration-and-realtime
