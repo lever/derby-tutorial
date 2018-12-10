@@ -3,8 +3,9 @@ _ = require('lodash')
 class RacerBasics {
 
   create() {
-    //// explaining what at does (scoping)
-    //// https://derbyjs.com/docs/derby-0.10/models/paths#scoped-models
+    // Create a scoped model with `model.at`. Scoping allows us to read/write
+    // from a scoped part of our data store, given a path (`exampleData`)
+    // https://derbyjs.com/docs/derby-0.10/models/paths#scoped-models
     this.$exampleData = this.model.at('exampleData')
     //// also explaining the significance of the $ prepending the var name
     this.$exampleData.set({
@@ -17,14 +18,11 @@ class RacerBasics {
       pokemons: {},
     })
 
-    //// i would explain the magic of the model where you can set paths even if they don't exist
-    //// and they would get created for you (which is a really cool thing imo)
-
-    //// also grouping model paths by type -- like in this case all inputs are grouped below
+    // Set default values for inputs. Racer lets you set on a path even if the
+    // parent object doesn't exist
     this.model.set('inputs.set.path', 'donut')
     this.model.set('inputs.set.value', 'chocolate')
     this.model.set('inputs.del.path', 'donut')
-    //// these paths are not used in the HTML currently so remove it?
     this.model.set('inputs.setNull.path', 'missingDonut')
     this.model.set('inputs.setNull.value', 'hazelnut')
 
@@ -57,9 +55,7 @@ class RacerBasics {
     this.$exampleData.setDiff(path, value)
   }
 
-  //// i would keep TODO's in a separate branch instead of having comments mixed in with master
-
-  // TODO 11/18/18:
+  // TODO 11/18/18: Add examples for
   // - setDiffDeep
   // - setArrayDiff
   // - setArrayDiffDeep
@@ -70,7 +66,7 @@ class RacerBasics {
     this.$exampleData.add(path, _.cloneDeep(object))
   }
 
-  // TODO 11/18/18:
+  // TODO 11/18/18: Add examples for
   // - setEach
 
   // Number methods
@@ -85,7 +81,7 @@ class RacerBasics {
     this.$exampleData.push(path, value)
   }
 
-  // TODO 11/18/18:
+  // TODO 11/18/18: Add examples for
   // - unshift
   // - insert
   // - pop
@@ -95,7 +91,7 @@ class RacerBasics {
 
   // String methods
 
-  // TODO 11/18/18:
+  // TODO 11/18/18: Add examples for
   // - stringInsert
   // - stringRemove
 }

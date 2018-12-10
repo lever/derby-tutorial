@@ -35,6 +35,8 @@ Take a look at `src/index.js` for all the different routes that are available. W
 
 If you find anything confusing, please [submit an issue here](https://github.com/lever/derby-tutorial/issues), or submit a PR with tutorial improvements! Your help and feedback is really appreciated :heart:
 
+Look for open issues or `TODO`s within the code if you want to start contributing!
+
 ## Overview
 
 We recommend following the order of this outline. Some info builds on top of each other, and that's especially useful if this is your first time using Derby.
