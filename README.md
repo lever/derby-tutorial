@@ -51,7 +51,6 @@ Later on, you can reference this tutorial and [the official docs](https://derbyj
 
 ### Hello world
 
-<!-- i would place HTML here so that you can open up this link in a new tab https://stackoverflow.com/questions/4425198/can-i-create-links-with-target-blank-in-markdown -->
 Let's learn the bare minimum of what a component can offer. First, let's visit
 [/hello-world](http://localhost:3456/hello-world) in your browser.
 
