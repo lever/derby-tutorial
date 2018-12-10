@@ -6,7 +6,7 @@
       This section is all about different ways we can set/update/modify data. The following are a handful of helpful methods that Racer Models expose for making updates.
     </p>
     <p>
-      Learn more about these basic methods at https://derbyjs.com/docs/derby-0.10/models/setters
+      Learn more about these basic methods <a href="https://derbyjs.com/docs/derby-0.10/models/setters">here</a>
     </p>
     <div class="col col-6">
       <h4>results</h4>
@@ -22,6 +22,10 @@
       <h4>del</h4>
       <input value="{{inputs.del.path}}">
       <button on-click="del(inputs.del.path)">del()</button>
+      <h4>setNull</h4>
+      <input value="{{inputs.setNull.path}}">
+      <input value="{{inputs.setNull.value}}">
+      <button on-click="setNull(inputs.setNull.path, inputs.setNull.value)">setNull()</button>
 
       <h3>Object methods</h3>
       <h4>add</h4>

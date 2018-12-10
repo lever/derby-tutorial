@@ -7,7 +7,7 @@ const faker = require('faker')
 
 // We'll use this component to demonstrate many of things you'd want to do with
 // components. Let's get started:
-class WholesomeComponent {
+class ComponentsInActionDemo {
 
   // A component has several lifecycle methods that we want to hook into:
   // - init
@@ -36,7 +36,7 @@ class WholesomeComponent {
   }
 }
 
-WholesomeComponent.prototype.name = 'components-in-action-demo'
-WholesomeComponent.prototype.view = __dirname
+ComponentsInActionDemo.prototype.name = 'components-in-action-demo'
+ComponentsInActionDemo.prototype.view = __dirname
 
-module.exports = WholesomeComponent
+module.exports = ComponentsInActionDemo

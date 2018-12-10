@@ -7,7 +7,7 @@ const CollaborativeNoteEditor = require('./components/collaborative-note-editor'
 const PetDisplayComponent = require('./components/components-in-action-demo/pet-display-component')
 const RacerBasics = require('./components/racer-basics')
 const HelloWorld = require('./components/hello-world')
-const WholesomeComponent = require('./components/components-in-action-demo')
+const ComponentsInActionDemo = require('./components/components-in-action-demo')
 
 // A Derby app lets us register components, views/templates, and routes.
 // Here we are creating an app called 'derby-tutorial'
@@ -27,7 +27,7 @@ app.component(CollaborativeNoteEditor)
 app.component(PetDisplayComponent)
 app.component(RacerBasics)
 app.component(HelloWorld)
-app.component(WholesomeComponent)
+app.component(ComponentsInActionDemo)
 
 app.loadViews(__dirname)
 
@@ -42,7 +42,7 @@ app.get('/racer-basics', (page) => {
 })
 
 app.get('/components-in-action-demo', (page) => {
-  page.render(WholesomeComponent.prototype.name)
+  page.render(ComponentsInActionDemo.prototype.name)
 })
 
 app.get('/collaborative-note-editor', (page, model) => {

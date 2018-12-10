@@ -5,6 +5,7 @@
   <div>
     This is displayed by components-in-action-demo!
     <br/>
+    <br/>
     Let's increase the number of child components:
     <button on-click="_addCat()">
       Meet a new cat
@@ -12,37 +13,54 @@
     <button on-click="_addDog()">
       Meet a new dog
     </button>
+    <br/>
+    <br/>
   </div>
-  {{each cats as #cat}}
-    <div>
-      Hey, meet {{#cat}}:
-      <br/>
-      <view is="pet-display-component"
-        animalName="{{#cat}}"
-        animalType="cat"/>
+  <div>
+    <div class="col col-6">
+      <!--
+        Use `each` blocks for loops, and #'s for aliases to an element in an array
+        https://derbyjs.com/docs/derby-0.10/views/template-syntax/blocks#each
+      -->
+      {{each cats as #cat}}
+        <div>
+          Hey, meet {{#cat}}:
+          <br/>
+          <view is="pet-display-component"
+            animalName="{{#cat}}"
+            animalType="cat"/>
+        </div>
+        <br/>
+        <br/>
+      {{/each}}
+      {{if cats.length > 5}}
+        <div>
+          This is going to show up after 5 cats!
+          <view is="surprise-partial:surprise"/>
+        </div>
+      {{/if}}
     </div>
-  {{/each}}
-  {{each dogs as #dog}}
-    <div>
-      Hey, meet {{#dog}}:
-      <br/>
-      <view is="pet-display-component"
-        animalName="{{#dog}}"
-        animalType="dog"/>
+    <div class="col col-6">
+      {{each dogs as #dog}}
+        <div>
+          Hey, meet {{#dog}}:
+          <br/>
+          <view is="pet-display-component"
+            animalName="{{#dog}}"
+            animalType="dog"/>
+        </div>
+        <br/>
+        <br/>
+      {{/each}}
+      {{if dogs.length > 3}}
+        <div>
+          This is the default:
+          <view is="surprise-partial"/>
+          <br/>
+          <br/>
+          And this is another example of a view partial you can import:
+          <view is="surprise-partial:you-can-call-this-anything"/>
+        </div>
+      {{/if}}
     </div>
-  {{/each}}
-  {{if cats.length > 5}}
-    <div>
-      This is going to show up after 5 cats!
-      <view is="surprise-partial:surprise"/>
-    </div>
-  {{/if}}
-  {{if dogs.length > 3}}
-    <div>
-      This is the default:
-      <view is="surprise-partial"/>
-      <br/>
-      And this is another example of a view partial you can import:
-      <view is="surprise-partial:you-can-call-this-anything"/>
-    </div>
-  {{/if}}
+  </div>
