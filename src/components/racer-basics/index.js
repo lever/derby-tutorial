@@ -7,7 +7,9 @@ class RacerBasics {
     // from a scoped part of our data store, given a path (`exampleData`)
     // https://derbyjs.com/docs/derby-0.10/models/paths#scoped-models
     this.$exampleData = this.model.at('exampleData')
-    //// also explaining the significance of the $ prepending the var name
+
+    // Prepend racer models with `$` for best practices. It helps developers
+    // distinguish them against POJO variables
     this.$exampleData.set({
       bitcoin: 3,
       books: [
@@ -46,7 +48,6 @@ class RacerBasics {
     this.$exampleData.del(path)
   }
 
-  //// this function is not used in the HTML so remove it?
   setNull(path, value) {
     this.$exampleData.setNull(path, value)
   }
