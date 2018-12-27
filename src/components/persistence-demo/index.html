@@ -1,0 +1,37 @@
+<index:>
+  <div class="row p2">
+    <input value="{{collectionName}}">
+    <button on-click="_fetchCollection(collectionName)">
+      Fetch collection
+    </button>
+    <button on-click="_subscribeCollection(collectionName)">
+      Subscribe collection
+    </button>
+  </div>
+  {{each collectionNames as #collectionName}}
+    <div class="border-top p2">
+      <div class="row pb2">
+        <h3>{{#collectionName}}</h3>
+        <p>{{statusByCollectionName[#collectionName]}}</p>
+        <button on-click="_subscribeCollection(#collectionName)">
+          Subscribe to {{#collectionName}}
+        </button>
+        <button on-click="_addDoc(#collectionName)">
+          Add {{#collectionName}}
+        </button>
+      </div>
+      {{each docsByCollectionName[#collectionName] as #doc}}
+        <div class="row border-top p2">
+          {{if errorMessageByDocId[#doc.id]}}
+            {{errorMessageByDocId[#doc.id]}}
+          {{/if}}
+          <pre contenteditable="true" on-input="_onDocInput($event, #collectionName, #doc.id)">
+            {{JSON.stringify(#doc, null, 2)}}
+          </pre>
+          <button on-click="_removeDoc(#collectionName, #doc.id)">
+            Remove
+          </button>
+        </div>
+      {{/each}}
+    </div>
+  {{/each}}

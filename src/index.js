@@ -4,16 +4,17 @@ const derby = require('derby')
 // These are components. You can think of them as the building blocks of your
 // app that encapsulate functionality.
 const CollaborativeNoteEditor = require('./components/collaborative-note-editor')
+const ComponentsInActionDemo = require('./components/components-in-action-demo')
+const HelloWorld = require('./components/hello-world')
+const PersistenceDemo = require('./components/persistence-demo')
 const PetDisplayComponent = require('./components/components-in-action-demo/pet-display-component')
 const RacerBasics = require('./components/racer-basics')
-const HelloWorld = require('./components/hello-world')
-const ComponentsInActionDemo = require('./components/components-in-action-demo')
 
 // A Derby app lets us register components, views/templates, and routes.
 // Here we are creating an app called 'derby-tutorial'
 const app = derby.createApp('derby-tutorial', __filename)
 
-// `derb-debug` is a middleware that lets us do things like inspect data and
+// `derby-debug` is a middleware that lets us do things like inspect data and
 // components on the page in the Developer Console.
 // More info here: https://github.com/derbyjs/derby-debug
 //
@@ -24,11 +25,13 @@ app.use(require('derby-debug'))
 // Components are defined as simple Javascript classes.
 // You tell Derby that they exist by by calling `app.component(...)`
 app.component(CollaborativeNoteEditor)
+app.component(ComponentsInActionDemo)
+app.component(HelloWorld)
+app.component(PersistenceDemo)
 app.component(PetDisplayComponent)
 app.component(RacerBasics)
-app.component(HelloWorld)
-app.component(ComponentsInActionDemo)
 
+app.loadStyles(__dirname)
 app.loadViews(__dirname)
 
 // This is a great starting place to examine a component. Visit this route in
@@ -55,6 +58,10 @@ app.get('/collaborative-note-editor/:noteId', (page, model, params, next) => {
     if (err) return next(err)
     page.render(CollaborativeNoteEditor.prototype.name)
   })
+})
+
+app.get('/persistence-demo', (page, model) => {
+  page.render(PersistenceDemo.prototype.name)
 })
 
 module.exports = app
