@@ -1,6 +1,6 @@
 <index:>
   <h1>Persistence Demo</h1>
-  <div class="row p2">
+  <div class="row">
     <p>
       ShareDB, Racer, and Derby abstracts away data management to allow users to create, read, update, and delete persisted docs - while maintaining realtime sync for those docs on multiple clients.
     </p>
@@ -13,39 +13,58 @@
     <p>
       Without defining access control, we can create whatever collection we want. Try fetching any collection below. I fetched and subscribed two collections respectively for you to get started.
     </p>
-
     <input placeholder="Write in a collection name here..." size="60" value="{{collectionName}}">
+    &nbsp;
     <button on-click="_fetchCollection(collectionName)">
       Fetch collection
     </button>
+    &nbsp;
     <button on-click="_subscribeCollection(collectionName)">
       Subscribe collection
     </button>
   </div>
-  {{each collectionNames as #collectionName}}
-    <div class="border-top p2">
-      <div class="row pb2">
-        <h3>{{#collectionName}}</h3>
-        <p>{{statusByCollectionName[#collectionName]}}</p>
-        <button on-click="_subscribeCollection(#collectionName)">
-          Subscribe to {{#collectionName}}
-        </button>
-        <button on-click="_addDoc(#collectionName)">
-          Add {{#collectionName}}
-        </button>
-      </div>
-      {{each docsByCollectionName[#collectionName] as #doc}}
-        <div class="row border-top p2">
-          {{if errorMessageByDocId[#doc.id]}}
-            {{errorMessageByDocId[#doc.id]}}
-          {{/if}}
-          <pre contenteditable="true" on-input="_onDocInput($event, #collectionName, #doc.id)">
-            {{JSON.stringify(#doc, null, 2)}}
-          </pre>
-          <button on-click="_removeDoc(#collectionName, #doc.id)">
-            Remove
-          </button>
-        </div>
-      {{/each}}
-    </div>
-  {{/each}}
+  <div class="row">
+    {{each collectionNames as #collectionName}}
+      <view is="collection-manager"
+        collectionName="{{#collectionName}}"/>
+    {{/each}}
+  </div>
+
+<!--
+  @param collectionName [String]
+-->
+<collection-manager:>
+  <div class="col border p2 mr2 mt2">
+    <h3>{{@collectionName}}</h3>
+    <span>{{statusByCollectionName[@collectionName]}}</span>
+    &nbsp;
+    <button on-click="_subscribeCollection(@collectionName)">
+      Subscribe to {{@collectionName}}
+    </button>
+    &nbsp;
+    <button on-click="_addDoc(@collectionName)">
+      Add {{@collectionName}}
+    </button>
+    {{each docsByCollectionName[@collectionName] as #doc}}
+      <view is="doc-editor"
+        collectionName="{{@collectionName}}"
+        doc="{{#doc}}"/>
+    {{/each}}
+  </div>
+
+<!--
+  @param collectionName [String]
+  @param doc [Object]
+-->
+<doc-editor:>
+  <div class="row border my2 p2">
+    {{if errorMessageByDocId[@doc.id]}}
+      {{errorMessageByDocId[@doc.id]}}
+    {{/if}}
+    <pre contenteditable="true" on-input="_onDocInput($event, @collectionName, @doc.id)">
+      {{JSON.stringify(@doc, null, 2)}}
+    </pre>
+    <button on-click="_removeDoc(@collectionName, @doc.id)">
+      Remove
+    </button>
+  </div>
