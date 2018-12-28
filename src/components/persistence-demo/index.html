@@ -1,6 +1,20 @@
 <index:>
+  <h1>Persistence Demo</h1>
   <div class="row p2">
-    <input value="{{collectionName}}">
+    <p>
+      ShareDB, Racer, and Derby abstracts away data management to allow users to create, read, update, and delete persisted docs - while maintaining realtime sync for those docs on multiple clients.
+    </p>
+    <p>
+      The local Racer Model (provided by Derby) holds a limited set of docs that is a portion of all docs available.
+    </p>
+    <p>
+      Unlike <a href="/racer-basics">Racer Basics</a>, where we played with data scoped locally to a component, we now modify data that is scoped at the collection level <code>#root.${collectionName}.${docId}</code>
+    </p>
+    <p>
+      Without defining access control, we can create whatever collection we want. Try fetching any collection below. I fetched and subscribed two collections respectively for you to get started.
+    </p>
+
+    <input placeholder="Write in a collection name here..." size="60" value="{{collectionName}}">
     <button on-click="_fetchCollection(collectionName)">
       Fetch collection
     </button>
