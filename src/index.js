@@ -9,6 +9,7 @@ const HelloWorld = require('./components/hello-world')
 const PersistenceDemo = require('./components/persistence-demo')
 const PetDisplayComponent = require('./components/components-in-action-demo/pet-display-component')
 const RacerBasics = require('./components/racer-basics')
+const WelcomePage = require('./components/welcome-page')
 
 // A Derby app lets us register components, views/templates, and routes.
 // Here we are creating an app called 'derby-tutorial'
@@ -30,12 +31,18 @@ app.component(HelloWorld)
 app.component(PersistenceDemo)
 app.component(PetDisplayComponent)
 app.component(RacerBasics)
+app.component(WelcomePage)
 
 app.loadStyles(__dirname)
 app.loadViews(__dirname)
 
 // This is a great starting place to examine a component. Visit this route in
 // the browser and look at the related source code!
+
+app.get('/', (page) => {
+ page.render(WelcomePage.prototype.name)
+})
+
 app.get('/hello-world', (page) => {
   page.render(HelloWorld.prototype.name)
 })
