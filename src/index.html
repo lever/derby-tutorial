@@ -4,4 +4,14 @@
 <Body:>
   <div class="p2">
     <view is="{{$render.ns}}"/>
+    
+    {{if $render.url !== "/"}}
+      <div class="p2 row">
+        <div class="col-12">
+          <hr/>
+          <p><a href="/">Back to Welcome Page</a></p>
+        </div>
+      </div>
+    {{/if}}
   </div>
+  
