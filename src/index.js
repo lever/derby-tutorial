@@ -6,6 +6,7 @@ const derby = require('derby')
 const CollaborativeNoteEditor = require('./components/collaborative-note-editor')
 const ComponentsInActionDemo = require('./components/components-in-action-demo')
 const HelloWorld = require('./components/hello-world')
+const ToDo = require('./components/to-do')
 const PersistenceDemo = require('./components/persistence-demo')
 const PetDisplayComponent = require('./components/components-in-action-demo/pet-display-component')
 const RacerBasics = require('./components/racer-basics')
@@ -28,6 +29,7 @@ app.use(require('derby-debug'))
 app.component(CollaborativeNoteEditor)
 app.component(ComponentsInActionDemo)
 app.component(HelloWorld)
+app.component(ToDo)
 app.component(PersistenceDemo)
 app.component(PetDisplayComponent)
 app.component(RacerBasics)
@@ -45,6 +47,10 @@ app.get('/', (page) => {
 
 app.get('/hello-world', (page) => {
   page.render(HelloWorld.prototype.name)
+})
+
+app.get('/to-do', (page) => {
+  page.render(ToDo.prototype.name)
 })
 
 app.get('/racer-basics', (page) => {

@@ -7,3 +7,7 @@ body {
 .border {
   border-color: #CCC;
 }
+
+.completed-task {
+  text-decoration: line-through;
+}

@@ -1,0 +1,24 @@
+<index:>
+  <h1>ToDo List</h1>
+  <ul>
+    <!-- Loop through tasks and display them -->
+    {{each tasks as #item, #index}}
+    <li>
+        <!-- Display task text -->
+        <span class="{{ #item.completed ? 'completed-task' : '' }}">{{#item.text}}</span>
+        
+        <!-- Button to mark task as completed -->
+        <button on-click="completeTask(#index)" if="{{!item.completed}}">{{ #item.completed ? 'Completed' : 'Complete' }}</button>
+        
+        <!-- Button to remove task -->
+        <button on-click="removeTask(#index)">Remove</button>
+      </li>
+      {{/each}}
+    </ul>
+  
+    
+  <!-- Input to add new task -->
+  <input type="text" placeholder="Add new task..." value="{{newTaskText}}">
+  <button on-click="addTask({ text: newTaskText, completed: false })">Add Task</button>
+
+
