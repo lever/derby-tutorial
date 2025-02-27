@@ -29,7 +29,7 @@
     "faker": "^4.1.0",
     "lodash": "^4.17.11",
     "racer": "^0.9.3",
-    "racer-bundle": "^0.3.0",
+    "racer-bundle": "^0.4.0",
     "sharedb-mingo-memory": "^1.1.0"
   }
 }
